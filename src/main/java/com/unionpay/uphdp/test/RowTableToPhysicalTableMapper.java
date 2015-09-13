@@ -32,7 +32,7 @@ public class RowTableToPhysicalTableMapper
  		 HCatRecord record = new DefaultHCatRecord(1);
  		 record.set(0, row2.getValue("id_and_name"));
 
-         // Just select and emit the name and ID
+         // Just select date and branch code as key
          context.write(new Text(row[0]), record);
      }
 
